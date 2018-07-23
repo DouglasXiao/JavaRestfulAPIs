@@ -104,8 +104,6 @@ public class testAppointments {
 
         ApiTestUtils.TestResponse res = ApiTestUtils.request("POST", testUrl, null);
         Assert.assertEquals(200, res.status);
-        String[] pieces = res.body.split(":");
-        String appointId = pieces[1].substring(0, pieces[1].length() - 1);
 
         testUrl = "/appointments/123456/12345678";
         res = ApiTestUtils.request("DELETE", testUrl, null);
